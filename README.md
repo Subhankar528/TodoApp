@@ -65,22 +65,22 @@ http://localhost:8080
 Here are some screenshots showcasing different parts of the application:
 
 ### 🔐 Login Page
-![Login Page](images/login.png)
+![Login Page](https://github.com/user-attachments/assets/5f62351b-4d1a-437d-98c1-a79f3ca8bdd8)
 
 ### 🏠 Home Page
-![Home Page](images/home.png)
+![Home Page](https://github.com/user-attachments/assets/2619d42a-27d4-41fb-b4ce-d0e4e0ed37d6)
 
 ### 📋 List To-Do
-![List To-Do](images/list_todo.png)
+![List To-Do](https://github.com/user-attachments/assets/89af0134-bdea-41f5-8929-d1d4eb992306)
 
 ### ✏️ Update Task
-![Update Task](images/update.png)
+![Update Task](https://github.com/user-attachments/assets/e87bc8cd-e6fa-4d64-90dc-71fdc3e4b794)
 
 ### 🚪 Logout Page
-![Logout Page](images/logout.png)
+![Logout Page](https://github.com/user-attachments/assets/8ec638cb-8538-45a1-965e-b76bc66ace9e)
 
 ## 🚀 Future Deployment Plans
-In the future, this application will be deployed using **Railway.app** with a cloud-based MySQL database. ☁️
+In the future, this application will be deployed in web with a cloud-based MySQL database. ☁️
 
 ## 🤝 Contributing
 Contributions are welcome! Feel free to submit pull requests and improve this project. 💡
