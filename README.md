@@ -59,6 +59,7 @@ Once the application is running, open your browser and visit:
 ```
 http://localhost:8080
 ```
+(Login ID, Password)= (user , pass) and (admin , Pass)
 
 ## 📸 Screenshots
 
