@@ -1,0 +1,195 @@
+## TODO
+
+id
+username
+description
+targetDate
+done
+ 
+TodoController
+Todos.jsp
+
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		</dependency>
+
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+
+mvn clean install
+
+-------------------------------------------------
+<dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>bootstrap</artifactId>
+	<version>5.1.3</version>
+</dependency>
+
+<dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>jquery</artifactId>
+	<version>3.6.0</version>
+</dependency>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<html>
+	<head>
+		<title>
+			My first HTML Page
+		</title>
+	</head>
+<body>
+	My first Html page with Body
+</body>
+</html>
+
+
+SayHelloController calls sayHello.jsp
+spring.mvc.view.prefix=/WEB-INF/jsp
+spring.mvc.view.suffix=.jsp
+
+
+==================================================================
+
+
+/META-INF/resources/webjars/bootstrap/5.1.3/css/bootstrap.min.css
+/META-INF/resources/webjars/bootstrap/5.1.3/js/bootstrap.min.js
+/META-INF/resources/webjars/jquery/3.6.0/jquery.min.js
+
+___---___---___---____---___---____---___---___---___---___---___---
+
+/pom.xml 
+<dependency>
+	<groupId>org.webjars</groupId>
+	<artifactId>bootstrap-datepicker</artifactId>
+	<version>1.9.0</version>
+</dependency>
+
+
+Snippets
+<link href="webjars/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" >
+ 
+<fieldset class="mb-3">				
+	<form:label path="description">Description</form:label>
+	<form:input type="text" path="description" required="required"/>
+	<form:errors path="description" cssClass="text-warning"/>
+</fieldset>
+<fieldset class="mb-3">				
+	<form:label path="targetDate">Target Date</form:label>
+	<form:input type="text" path="targetDate" required="required"/>
+	<form:errors path="targetDate" cssClass="text-warning"/>
+</fieldset>
+		
+<script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript">
+	$('#targetDate').datepicker({
+	    format: 'yyyy-mm-dd'
+	});
+</script>
+
+______________________________________________________________________________
+
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-3 p-1">
+	<a class="navbar-brand m-1" href="https://courses.in28minutes.com">in28Minutes</a>
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/list-todos">Todos</a></li>
+		</ul>
+	</div>
+	<ul class="navbar-nav">
+		<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+	</ul>	
+</nav>
+
+
+
+
+---------------------------------------------------------------------
+REMOVED CODES FROM LOGINCONTROLLER
+---------------------------------------------------------------------
+//	public LoginController(AuthenticationService auth) {
+//		super();
+//		this.auth = auth;
+//	}
+//
+//	private AuthenticationService auth;
+//	private Logger logger = LoggerFactory.getLogger(getClass());
+//
+////	@RequestMapping("login")
+////	public String gotoLoginPage() {//(@RequestParam String name, ModelMap model)
+////		logger.info("Sending Logs from LoginController Param is {} ",name);
+////		model.put("name", name);
+////		return "login";
+////	}
+//	@RequestMapping(value = "login", method = RequestMethod.GET)
+//	public String gotoLoginPage() {
+//		logger.info("Get REQUEST");
+//		return "login";
+//	}
+//
+//	@RequestMapping(value = "login", method = RequestMethod.POST)
+//	public String gotoWelcomePage(@RequestParam String name, @RequestParam String password, ModelMap model) {
+//		logger.info("Post REQUEST");
+//		if (auth.authenticate(name, password)) {
+//			model.put("name", name);
+//			return "welcome";
+//		}
+//		model.put("errorMessage","Invalid Credentials");
+//		return "login";
+//	}
+//	
+//	
+	
+------------------------------------------------------------------------------------
+
+
+
+DOCKER
+
+
+Launch MySQL using Docker
+docker run --detach 
+--env MYSQL_ROOT_PASSWORD=dummypassword 
+--env MYSQL_USER=todos-user 
+--env MYSQL_PASSWORD=dummytodos 
+--env MYSQL_DATABASE=todos 
+--name mysql 
+--publish 3306:3306 
+mysql:8-oracle
+
+
+application.properties 
+#spring.datasource.url=jdbc:h2:mem:testdb
+ 
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/todos
+spring.datasource.username=todos-user
+spring.datasource.password=dummytodos
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+ 
+#todos-user@localhost:3306
+
+
+mysqlsh commands
+mysqlsh
+\connect todos-user@localhost:3306
+\sql
+use todos
+select * from todo;
+\quit
+
+
+<!-- Use this for Spring Boot 3.1 and higher -->
+<dependency>
+	<groupId>com.mysql</groupId>
+	<artifactId>mysql-connector-j</artifactId>
+</dependency> 
+
+

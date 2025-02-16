@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>
+			My first HTML Page
+		</title>
+	</head>
+<body>
+	My first Html page with Body
+</body>
+</html>
+
+
+SayHelloController calls sayHello.jsp
+spring.mvc.view.prefix=/WEB-INF/jsp
+spring.mvc.view.suffix=.jsp
