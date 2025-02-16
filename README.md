@@ -6,7 +6,7 @@ This is a robust and efficient To-Do web application built using **Spring Boot**
 - **Backend:** Spring Boot
 - **Database:** MySQL
 - **ORM:** JPA (Hibernate)
-- **Frontend:** HTML, CSS, JavaScript (Optional)
+- **Frontend:** HTML,BOOTSTRAP
 
 ## 📌 Getting Started
 
